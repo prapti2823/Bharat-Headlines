@@ -8,10 +8,10 @@ import BharatHeadlines from '../assets/bharatheadlines.png'
 const UpperNavbar = () => {
     return (
         <div>
-            <Navbar expand="md" className="bg-gray-300">
+            <Navbar expand="lg" className="bg-gray-300">
                 <Container fluid>
                     <div className='pr-3 max-md:pr-0'>
-                        <CardImg src={BharatHeadlines} className='w-20 h-20 rounded-2xl !rounded-full' />
+                        <CardImg src={BharatHeadlines} className='w-20 h-20 rounded-2xl !rounded-full max-sm:w-10 max-sm:h-10' />
                     </div>
                     <Navbar.Brand href="/" className='text-black'>Bharat Headlines</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
