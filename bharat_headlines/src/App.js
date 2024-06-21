@@ -3,6 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import UpperNavbar from './Components/UpperNavbar';
 import Home from './Pages/Home';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/science" element={<Home category="science" />} />
           <Route path="/health" element={<Home category="health" />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );

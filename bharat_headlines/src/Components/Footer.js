@@ -32,7 +32,7 @@ const Footer = () => {
         <div>
             <footer>
                 <div className='flex flex-col justify-center align-items-center p-2 bg-gray-300'>
-                    <Row className='m-2 pb-2 text-white max-sm:pb-0'>
+                    <Row className='m-2 pb-2 text-black max-sm:pb-0'>
                         Designed and Developed By Prapti Shah 🖤
                     </Row>
                     <Row className='pt-2 max-sm:pt-0'>
