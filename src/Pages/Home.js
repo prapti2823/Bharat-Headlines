@@ -27,21 +27,19 @@ const Home = ({ category }) => {
         }
     }
 
-    const fetchData = async () => {
-        try {
-            setLoading(true);
-            const articles = await fetchNewsData(category);
-            setData(articles);
-
-        } catch (error) {
-            console.log(error);
-        }
-        finally {
-            setLoading(false);
-        }
-    }
-
     useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true);
+                const articles = await fetchNewsData(category);
+                setData(articles);
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
         fetchData();
     }, [category]);
 
@@ -50,7 +48,7 @@ const Home = ({ category }) => {
         <>
             {loading ? (
                 <div className='flex justify-center p-10'>
-                        <CircularProgress/>
+                    <CircularProgress />
                 </div>
             ) : (
                 <div className='grid 2xl:grid-cols-4 grid-cols-3 max-[769px]:grid-cols-2 max-[665px]:grid-cols-1 p-4'>
