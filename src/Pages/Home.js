@@ -10,7 +10,8 @@ const Home = ({ category }) => {
     const fetchNewsData = async (category) => {
         try {
             setLoading(true);
-            let apiUrl = "https://newsapi.org/v2/top-headlines?country=in&apiKey=958b6021ec534787be1fca413af2a492";
+            const apiKey = process.env.REACT_APP_SECRET_KEY;
+            let apiUrl = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 
             if (category !== "all") {
                 apiUrl += `&category=${category}`;
