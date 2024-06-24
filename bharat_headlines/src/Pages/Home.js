@@ -43,7 +43,7 @@ const Home = ({ category }) => {
 
     useEffect(() => {
         fetchData();
-    }, [category]);
+    }, []);
 
     return (
 
