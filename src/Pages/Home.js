@@ -11,13 +11,14 @@ const Home = ({ category }) => {
         try {
             setLoading(true);
             const apiKey = process.env.REACT_APP_SECRET_KEY;
+            const corsProxy = 'https://cors-anywhere.herokuapp.com/';
             let apiUrl = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 
             if (category !== "all") {
                 apiUrl += `&category=${category}`;
             }
 
-            const response = await axios.get(apiUrl);
+            const response = await axios.get(corsProxy + apiUrl);
             return response.data.articles;
         } catch (error) {
             console.log(error);
