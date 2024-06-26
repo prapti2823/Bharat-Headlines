@@ -2,6 +2,6 @@
   functions = "netlify/functions"
 [[redirects]]
 from = '/*'
-to = "/index.html"
+to = "https://main--courageous-puffpuff-6b8531.netlify.app/"
 status = 200
 headers = {X-From = "Netlify"}
